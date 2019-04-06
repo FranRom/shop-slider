@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Slider from './components/Slider';
+
+import ENDPOINT_RESPONSE from './endpoint';
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-        <h1>Landing</h1>
-        </header>
-      </div>
-    );
+    return <Slider productsData={ENDPOINT_RESPONSE} />;
   }
 }
 
