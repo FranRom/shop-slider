@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Slide.scss';
 
-const Slide = ({ productData }) => {
+const Slide = ({ slideData }) => {
   const {
     title,
     subtitle,
@@ -14,7 +14,7 @@ const Slide = ({ productData }) => {
     mouthfeel,
     price,
     image
-  } = productData;
+  } = slideData;
   return (
     <div className="wrapper">
       <div className="half-column orange">
@@ -54,7 +54,7 @@ const Slide = ({ productData }) => {
 };
 
 Slide.propTypes = {
-  productData: PropTypes.shape({
+  slideData: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,

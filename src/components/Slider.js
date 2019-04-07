@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import Slide from './Slide';
 
-class Slider extends Component {
-  render() {
-    return (
-      <div>
-        {this.props.productsData.ENDPOINT_RESPONSE.map(productData => (
-          <Slide productData={productData} key={productData.id} />
-        ))}
-      </div>
-    );
-  }
-}
+const Slider = ({ slides }) => (
+  <div>
+    {slides.map(slideData => (
+      <Slide slideData={slideData} key={slideData.id} />
+    ))}
+  </div>
+);
+
+Slider.propTypes = {
+  slides: PropTypes.shape().isRequired
+};
 
 export default Slider;
