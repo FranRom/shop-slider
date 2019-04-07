@@ -4,15 +4,24 @@ $delete-border: -1px;
 $bold: 600;
 $title-width: 400px;
 $subtitle-width: 150px;
+$subtitle-height: 40px;
 $info-width: 101px;
 $info-height: 115px;
 $weigth-width: 40px;
+$weight-height: 32px;
 $description-width: 265px;
+$description-height: 192px;
 $water-orange: #e97171;
 $water-purple: #32355a;
 $water-green: #198b89;
 $pink-water: #f3c5d0;
 $border: 1px solid $water-purple;
+$size-L: 1.1rem;
+$size-XL: 1.3rem;
+
+p {
+  margin: 8px;
+}
 
 h1 {
   font-size: 50px;
@@ -24,7 +33,7 @@ h4 {
   margin: 0 auto;
   padding-bottom: $unit / 2;
   font-weight: $bold;
-  font-size: 1.1rem;
+  font-size: $size-L;
 }
 
 .wrapper {
@@ -47,12 +56,17 @@ h4 {
     min-width: 200px;
     align-items: center;
 
+    & .image {
+      height: 650px;
+    }
+
     & .block {
       padding: $unit * 1.5;
       border: $border;
 
       &.title {
         width: $title-width;
+        height: 180px;
         margin-left: 10%;
         padding: $unit $unit * 4;
         margin-bottom: $delete-border;
@@ -61,13 +75,16 @@ h4 {
 
       &.subtitle {
         width: $subtitle-width;
+        height: $subtitle-height;
         margin-bottom: $delete-border;
         font-weight: $bold;
+        font-size: $size-XL;
       }
 
       &.description {
         width: $description-width;
         min-width: $description-width;
+        height: $description-height;
       }
 
       &.info {
@@ -78,12 +95,14 @@ h4 {
 
       &.weight {
         width: $weigth-width;
+        height: $weight-height;
         position: relative;
         right: 11px;
-        top: -46px;
+        top: -77px;
         margin-left: $delete-border;
         margin-top: $delete-border;
         font-weight: $bold;
+        font-size: $size-L;
       }
     }
 
@@ -131,9 +150,38 @@ h4 {
     width: $gap;
     height: $gap;
     padding: $unit;
-    font-size: 1.3rem;
+    font-size: $size-XL;
     text-align: center;
     background-color: transparent;
     border: $border;
   }
+}
+
+// Animations:
+
+.item-enter {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 500ms ease-in;
+}
+.item-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.item-exit {
+  opacity: 0;
+}
+
+.image-enter {
+  opacity: 0;
+  transform: translateY(1050px);
+  transition: all 600ms ease-in;
+}
+.image-enter-active {
+  opacity: 1;
+
+  transform: translateY(325px);
+}
+.image-exit {
+  opacity: 0;
 }
