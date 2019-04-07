@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import './Slide.scss';
 
-const Slide = ({ slideData, handleGoToNextSlide }) => {
+const Slide = ({ slideData, nextSlide }) => {
   const {
     title,
     subtitle,
@@ -15,6 +16,7 @@ const Slide = ({ slideData, handleGoToNextSlide }) => {
     price,
     image
   } = slideData;
+
   return (
     <div className="wrapper">
       <div className="half-column orange">
@@ -46,9 +48,9 @@ const Slide = ({ slideData, handleGoToNextSlide }) => {
           <div>
             <input type="number" defaultValue="1" />
             <button className="btn">ADD TO CART</button>
-            <button className="btn" onClick={handleGoToNextSlide}>
-              NEXT PRODUCT
-            </button>
+            <Link to={`/product/${nextSlide}`}>
+              <button className="btn">NEXT PRODUCT</button>
+            </Link>
           </div>
         </footer>
       </div>
@@ -69,7 +71,7 @@ Slide.propTypes = {
     price: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired
   }),
-  handleGoToNextSlide: PropTypes.func.isRequired
+  nextSlide: PropTypes.string.isRequired
 };
 
 export default Slide;
