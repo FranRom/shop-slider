@@ -120,6 +120,7 @@ h4 {
     color: white;
     font-size: 1.2rem;
     border: transparent;
+    margin-left: $unit * 2;
     cursor: pointer;
     &:hover {
       box-shadow: 1px;
@@ -130,7 +131,6 @@ h4 {
     width: $gap;
     height: $gap;
     padding: $unit;
-    margin-right: $unit * 2;
     font-size: 1.3rem;
     text-align: center;
     background-color: transparent;

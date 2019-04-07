@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Slide.scss';
 
-const Slide = ({ slideData }) => {
+const Slide = ({ slideData, handleGoToNextSlide }) => {
   const {
     title,
     subtitle,
@@ -46,6 +46,9 @@ const Slide = ({ slideData }) => {
           <div>
             <input type="number" defaultValue="1" />
             <button className="btn">ADD TO CART</button>
+            <button className="btn" onClick={handleGoToNextSlide}>
+              NEXT PRODUCT
+            </button>
           </div>
         </footer>
       </div>
@@ -65,7 +68,8 @@ Slide.propTypes = {
     mouthfeel: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired
-  })
+  }),
+  handleGoToNextSlide: PropTypes.func.isRequired
 };
 
 export default Slide;
