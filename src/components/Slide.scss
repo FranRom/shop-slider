@@ -205,28 +205,38 @@ h4 {
 
 // Animations:
 
-.item-enter {
+.transition-item-enter {
   opacity: 0;
   transform: translateY(150px);
   transition: all 500ms ease-in;
 }
-.item-enter-active {
+.transition-item-enter-active {
   opacity: 1;
   transform: translateY(0px);
 }
-.item-exit {
+.transition-item-exit {
   opacity: 0;
 }
 
-.image-enter {
+.transition-image-enter {
   opacity: 0;
   transform: translateY(700px);
   transition: all 600ms ease-in;
 }
-.image-enter-active {
+.transition-image-enter-active {
   opacity: 1;
   transform: translateY(325px);
 }
-.image-exit {
+.transition-image-exit {
+  opacity: 0;
+}
+
+.square-one-enter {
+  opacity: 0;
+}
+.square-one-enter-active {
+  opacity: 0;
+}
+.square-one-image-exit {
   opacity: 0;
 }

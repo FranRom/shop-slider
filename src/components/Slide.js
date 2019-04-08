@@ -6,9 +6,9 @@ import classNames from 'classnames';
 
 import './Slide.scss';
 
-const TransitionWrapper = ({ children, id }) => (
+const TransitionWrapper = ({ children, id, className }) => (
   <TransitionGroup>
-    <CSSTransition key={id} timeout={1000} classNames="item">
+    <CSSTransition key={id} timeout={1000} classNames={className}>
       {children}
     </CSSTransition>
   </TransitionGroup>
@@ -53,37 +53,41 @@ const Slide = ({ slideData, nextSlide }) => {
     <div className="wrapper">
       <div className={bigBackgroundClass}>
         <TransitionGroup>
-          <CSSTransition key={id} timeout={1000} classNames="image">
+          <CSSTransition key={id} timeout={1000} classNames="transition-image">
             <div className="image">
               <img src={image} alt={title} />
             </div>
           </CSSTransition>
         </TransitionGroup>
         <div className="color-column-group">
-          <div className={colorSquareOneClass} />
-          <div className={colorSquareTwoClass} />
+          <TransitionWrapper id={id} className="square-one">
+            <div className={colorSquareOneClass} />
+          </TransitionWrapper>
+          <TransitionWrapper id={id} className="square-one">
+            <div className={colorSquareTwoClass} />
+          </TransitionWrapper>
         </div>
       </div>
       <div className="half-column pink">
         <div className="block subtitle">
-          <TransitionWrapper id={id}>
+          <TransitionWrapper id={id} className="transition-item">
             <p>{subtitle}</p>
           </TransitionWrapper>
         </div>
 
         <div className="block title">
-          <TransitionWrapper id={id}>
+          <TransitionWrapper id={id} className="transition-item">
             <h1>{title}</h1>
           </TransitionWrapper>
         </div>
         <div className="details">
           <div className="block description">
-            <TransitionWrapper id={id}>
+            <TransitionWrapper id={id} className="transition-item">
               <p>{description}</p>
             </TransitionWrapper>
           </div>
           <div className="block info">
-            <TransitionWrapper id={id}>
+            <TransitionWrapper id={id} className="transition-item">
               <div>
                 <h4>Taste</h4>
                 <p>{taste}</p>
@@ -91,7 +95,7 @@ const Slide = ({ slideData, nextSlide }) => {
             </TransitionWrapper>
           </div>
           <div className="block info">
-            <TransitionWrapper id={id}>
+            <TransitionWrapper id={id} className="transition-item">
               <div>
                 <h4>Aroma</h4>
                 <p>{aroma}</p>
@@ -99,7 +103,7 @@ const Slide = ({ slideData, nextSlide }) => {
             </TransitionWrapper>
           </div>
           <div className="block info">
-            <TransitionWrapper id={id}>
+            <TransitionWrapper id={id} className="transition-item">
               <div>
                 <h4>Mouthfeel</h4>
                 <p>{mouthfeel}</p>
@@ -108,13 +112,13 @@ const Slide = ({ slideData, nextSlide }) => {
           </div>
         </div>
         <span className="block weight">
-          <TransitionWrapper id={id}>
+          <TransitionWrapper id={id} className="transition-item">
             <p>{weight}</p>
           </TransitionWrapper>
         </span>
         <footer className="footer">
           <div className="price">
-            <TransitionWrapper id={id}>
+            <TransitionWrapper id={id} className="transition-item">
               <p>{price}</p>
             </TransitionWrapper>
           </div>
