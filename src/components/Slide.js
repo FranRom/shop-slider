@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import classNames from 'classnames';
 
 import './Slide.scss';
 
@@ -27,9 +28,30 @@ const Slide = ({ slideData, nextSlide }) => {
     image
   } = slideData;
 
+  const bigBackgroundClass = classNames({
+    'half-column': true,
+    'orange-water': id === '1',
+    'salmon-lap': id === '2',
+    'green-cey': id === '3'
+  });
+
+  const colorSquareOneClass = classNames({
+    'color-column': true,
+    'purple-water': id === '1',
+    'marengo-lap': id === '2',
+    'purple-cey': id === '3'
+  });
+
+  const colorSquareTwoClass = classNames({
+    'color-column': true,
+    'green-water': id === '1',
+    'purple-lap': id === '2',
+    'orange-cey': id === '3'
+  });
+
   return (
     <div className="wrapper">
-      <div className="half-column orange">
+      <div className={bigBackgroundClass}>
         <TransitionGroup>
           <CSSTransition key={id} timeout={1000} classNames="image">
             <div className="image">
@@ -38,8 +60,8 @@ const Slide = ({ slideData, nextSlide }) => {
           </CSSTransition>
         </TransitionGroup>
         <div className="color-column-group">
-          <div className="color-column green " />
-          <div className="color-column purple" />
+          <div className={colorSquareOneClass} />
+          <div className={colorSquareTwoClass} />
         </div>
       </div>
       <div className="half-column pink">
