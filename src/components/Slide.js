@@ -37,6 +37,10 @@ const Slide = ({ slideData, nextSlide }) => {
             </div>
           </CSSTransition>
         </TransitionGroup>
+        <div className="color-column-group">
+          <div className="color-column green " />
+          <div className="color-column purple" />
+        </div>
       </div>
       <div className="half-column pink">
         <div className="block subtitle">
