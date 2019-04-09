@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 import TransitionWrapper from './TransitionWrapper';
+import BlockInfo from './BlockInfo';
+import Footer from './Footer';
 
 import './Slide.scss';
 
@@ -62,67 +63,38 @@ const Slide = ({ slideData, nextSlide }) => {
       </div>
 
       <div className="half-column pink">
-        <div className="block subtitle">
-          <TransitionWrapper id={id} className="transition-item">
-            <p>{subtitle}</p>
-          </TransitionWrapper>
+        <BlockInfo id={id} description={subtitle} className="block subtitle" />
+        <BlockInfo id={id} title={title} className="block title" />
+
+        <div className="details">
+          <BlockInfo
+            id={id}
+            description={description}
+            className="block description"
+          />
+          <BlockInfo
+            id={id}
+            subtitle="Taste"
+            description={taste}
+            className="block info"
+          />
+          <BlockInfo
+            id={id}
+            subtitle="Aroma"
+            description={aroma}
+            className="block info"
+          />
+          <BlockInfo
+            id={id}
+            subtitle="MouthFeel"
+            description={mouthfeel}
+            className="block info"
+          />
         </div>
 
-        <div className="block title">
-          <TransitionWrapper id={id} className="transition-item">
-            <h1>{title}</h1>
-          </TransitionWrapper>
-        </div>
-        <div className="details">
-          <div className="block description">
-            <TransitionWrapper id={id} className="transition-item">
-              <p>{description}</p>
-            </TransitionWrapper>
-          </div>
-          <div className="block info">
-            <TransitionWrapper id={id} className="transition-item">
-              <div>
-                <h4>Taste</h4>
-                <p>{taste}</p>
-              </div>
-            </TransitionWrapper>
-          </div>
-          <div className="block info">
-            <TransitionWrapper id={id} className="transition-item">
-              <div>
-                <h4>Aroma</h4>
-                <p>{aroma}</p>
-              </div>
-            </TransitionWrapper>
-          </div>
-          <div className="block info">
-            <TransitionWrapper id={id} className="transition-item">
-              <div>
-                <h4>Mouthfeel</h4>
-                <p>{mouthfeel}</p>
-              </div>
-            </TransitionWrapper>
-          </div>
-        </div>
-        <span className="block weight">
-          <TransitionWrapper id={id} className="transition-item">
-            <p>{weight}</p>
-          </TransitionWrapper>
-        </span>
-        <footer className="footer">
-          <div className="price">
-            <TransitionWrapper id={id} className="transition-item">
-              <p>{price}</p>
-            </TransitionWrapper>
-          </div>
-          <div>
-            <input type="number" defaultValue="1" />
-            <button className="btn">ADD TO CART</button>
-            <Link to={`/product/${nextSlide}`}>
-              <button className="btn">NEXT PRODUCT</button>
-            </Link>
-          </div>
-        </footer>
+        <BlockInfo id={id} description={weight} className="block weight" />
+
+        <Footer id={id} price={price} nextSlide={nextSlide} />
       </div>
     </div>
   );
