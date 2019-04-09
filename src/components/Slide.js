@@ -1,18 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import classNames from 'classnames';
 
-import './Slide.scss';
+import TransitionWrapper from './TransitionWrapper';
 
-const TransitionWrapper = ({ children, id, className }) => (
-  <TransitionGroup>
-    <CSSTransition key={id} timeout={1000} classNames={className}>
-      {children}
-    </CSSTransition>
-  </TransitionGroup>
-);
+import './Slide.scss';
 
 const Slide = ({ slideData, nextSlide }) => {
   const {
@@ -36,14 +29,14 @@ const Slide = ({ slideData, nextSlide }) => {
   });
 
   const colorSquareOneClass = classNames({
-    'color-column': true,
+    'color-square-container': true,
     'purple-water': id === '1',
     'marengo-lap': id === '2',
     'purple-cey': id === '3'
   });
 
   const colorSquareTwoClass = classNames({
-    'color-column': true,
+    'color-square-container': true,
     'green-water': id === '1',
     'purple-lap': id === '2',
     'orange-cey': id === '3'
@@ -52,22 +45,22 @@ const Slide = ({ slideData, nextSlide }) => {
   return (
     <div className="wrapper">
       <div className={bigBackgroundClass}>
-        <TransitionGroup>
-          <CSSTransition key={id} timeout={1000} classNames="transition-image">
-            <div className="image">
-              <img src={image} alt={title} />
-            </div>
-          </CSSTransition>
-        </TransitionGroup>
+        <TransitionWrapper id={id} className="transition-image">
+          <div className="image">
+            <img src={image} alt={title} />
+          </div>
+        </TransitionWrapper>
+
         <div className="color-column-group">
           <TransitionWrapper id={id} className="square-one">
             <div className={colorSquareOneClass} />
           </TransitionWrapper>
-          <TransitionWrapper id={id} className="square-one">
+          <TransitionWrapper id={id} className="square-two">
             <div className={colorSquareTwoClass} />
           </TransitionWrapper>
         </div>
       </div>
+
       <div className="half-column pink">
         <div className="block subtitle">
           <TransitionWrapper id={id} className="transition-item">

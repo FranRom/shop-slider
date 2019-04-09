@@ -12,7 +12,11 @@ class App extends Component {
   };
 
   componentDidMount() {
-    //We would set here the real API CALL
+    // We would set here the real API CALL, Example:
+    // fetch('https://api.mydomain.com')
+    // .then(response => response.json())
+    // .then(data => this.setState({ slides: data }));
+
     this.setState({
       slides: ENDPOINT_RESPONSE.ENDPOINT_RESPONSE,
       slidesIds: this.getAllSlidesIds(ENDPOINT_RESPONSE.ENDPOINT_RESPONSE)

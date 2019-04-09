@@ -58,10 +58,15 @@ h4 {
     bottom: 0;
   }
 
-  & .color-column {
+  & .color-square-container {
     height: 30vh;
     width: 25vw;
   }
+
+  // & .color-square-fill {
+  //   width: 100%;
+  //   height: 100%;
+  // }
 
   & .half-column {
     display: flex;
@@ -221,7 +226,7 @@ h4 {
 .transition-image-enter {
   opacity: 0;
   transform: translateY(700px);
-  transition: all 600ms ease-in;
+  transition: all 500ms ease-in;
 }
 .transition-image-enter-active {
   opacity: 1;
@@ -232,11 +237,39 @@ h4 {
 }
 
 .square-one-enter {
-  opacity: 0;
+  opacity: 0.01;
+  transform: translate(-300px, 0);
 }
 .square-one-enter-active {
-  opacity: 0;
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 500ms ease-in;
+  position: fixed;
+  bottom: 0;
 }
-.square-one-image-exit {
+.square-one-exit {
+  opacity: 1;
+}
+.square-one-exit-active {
   opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+
+.square-two-enter {
+  opacity: 0.01;
+  transform: translateY(300px);
+}
+.square-two-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms ease-in;
+  position: fixed;
+  bottom: 0;
+}
+.square-two-exit {
+  opacity: 1;
+}
+.square-two-exit-active {
+  opacity: 0.1;
+  transition: opacity 100ms ease-in-out;
 }
