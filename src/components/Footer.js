@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import TransitionWrapper from './TransitionWrapper';
 import Actions from './Actions';
 
+import './Footer.scss';
+
 const Footer = ({ id, price, nextSlide }) => {
   return (
     <footer className="footer">

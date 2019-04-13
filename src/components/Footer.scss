@@ -1,0 +1,40 @@
+@import '../scss/variables';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  max-width: 100vw;
+  width: 40%;
+  height: 100px;
+  border-top: $border;
+  padding-top: $gap;
+
+  & .price {
+    font-size: $gap;
+  }
+
+  & .btn {
+    padding: $unit * 2;
+    background-color: $purple-water;
+    color: white;
+    font-size: 1.2rem;
+    border: transparent;
+    margin-left: $unit * 2;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px;
+    }
+  }
+
+  & input {
+    width: $gap;
+    height: $gap;
+    padding: $unit;
+    font-size: $size-XL;
+    text-align: center;
+    background-color: transparent;
+    border: $border;
+  }
+}

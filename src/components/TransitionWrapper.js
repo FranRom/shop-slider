@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
+import '../scss/animations.scss';
+
 const TransitionWrapper = ({ inVar, children, id, className }) => (
   <TransitionGroup>
     <CSSTransition
