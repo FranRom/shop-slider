@@ -1,7 +1,7 @@
 .transition-item-enter {
   opacity: 0;
   transform: translateY(150px);
-  transition: all 500ms ease-in;
+  transition: all 300ms ease-in;
 }
 .transition-item-enter-active {
   opacity: 1;
@@ -13,14 +13,14 @@
 
 .transition-image-enter {
   transform: translateY(1200px);
-  transition: all 700ms ease-in;
+  transition: all 500ms ease-in;
 }
 .transition-image-enter-active {
   transform: translateY(325px);
 }
 .transition-image-exit {
   transform: translateY(-700px);
-  transition: transform 500ms ease-in;
+  transition: transform 300ms ease-in;
 }
 
 .transition-image-exit-active {
@@ -28,39 +28,37 @@
 }
 
 .transition-square-one-enter {
-  opacity: 0.01;
+  opacity: 0.1;
   transform: translate(-300px, 0);
 }
 .transition-square-one-enter-active {
   opacity: 1;
   transform: translate(0, 0);
-  transition: all 500ms ease-in;
+  transition: all 300ms ease-in;
   position: fixed;
   bottom: 0;
 }
 .transition-square-one-exit {
-  opacity: 1;
+  opacity: 0;
 }
 .transition-square-one-exit-active {
   opacity: 0;
-  transition: opacity 100ms ease-in-out;
 }
 
 .transition-square-two-enter {
-  opacity: 0.01;
+  opacity: 0.1;
   transform: translateY(300px);
 }
 .transition-square-two-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: all 500ms ease-in;
+  transition: all 300ms ease-in;
   position: fixed;
   bottom: 0;
 }
 .transition-square-two-exit {
-  opacity: 1;
+  opacity: 0;
 }
 .transition-square-two-exit-active {
-  opacity: 0.1;
-  transition: opacity 100ms ease-in-out;
+  opacity: 0;
 }

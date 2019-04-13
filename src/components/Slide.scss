@@ -106,11 +106,20 @@ h4 {
     }
   }
 
-  & .pink {
-    background-color: $pink-water;
-  }
   & .orange-water {
     background-color: $orange-water;
+    transition: background-color 1s ease-out;
+  }
+  & .salmon-lap {
+    background-color: $salmon-lap;
+    transition: background-color 1s ease-out;
+  }
+  & .green-cey {
+    background-color: $green-cey;
+    transition: background-color 1s ease-out;
+  }
+  & .pink {
+    background-color: $pink-water;
   }
   & .green-water {
     background-color: $green-water;
@@ -118,17 +127,11 @@ h4 {
   & .purple-water {
     background-color: $purple-water;
   }
-  & .salmon-lap {
-    background-color: $salmon-lap;
-  }
   & .marengo-lap {
     background-color: $marengo-lap;
   }
   & .purple-lap {
     background-color: $purple-lap;
-  }
-  & .green-cey {
-    background-color: $green-cey;
   }
   & .purple-cey {
     background-color: $purple-cey;
