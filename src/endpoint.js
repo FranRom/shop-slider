@@ -10,7 +10,8 @@ export const ENDPOINT_RESPONSE = [
     mouthfeel: 'Full but short with a mineral finish',
     weight: '80G',
     price: '$39.00',
-    image: 'http://placehold.jp/450x650.png'
+    image:
+      'https://cdn.shopify.com/s/files/1/1031/5373/products/800_56dd0e934a4380.94329467_Masala_20Chai_large_2109c6c4-abe8-4a93-8352-7da364ad5211@2x.png?v=1496959802'
   },
   {
     id: '2',
@@ -23,7 +24,8 @@ export const ENDPOINT_RESPONSE = [
     mouthfeel: 'Delicate',
     weight: '80G',
     price: '$27.00',
-    image: 'http://placehold.jp/450x650.png'
+    image:
+      'https://cdn.shopify.com/s/files/1/1031/5373/products/1083_59419c315af707.61758470_Bella-RaspberryGreen_grande_large_299bdde0-691c-45b3-9d5d-8ce9998d4e8f@2x.png?v=1497472117'
   },
   {
     id: '3',
@@ -36,7 +38,8 @@ export const ENDPOINT_RESPONSE = [
     mouthfeel: 'Dry',
     weight: '80G',
     price: '$32.00',
-    image: 'http://placehold.jp/450x650.png'
+    image:
+      'https://cdn.shopify.com/s/files/1/1031/5373/products/798_56dd0d441616a6.10388517_Cashmere_20Rouge_large_4674f756-e098-43a3-9e0a-b37bce231520@2x.png?v=1496780229'
   }
 ];
 

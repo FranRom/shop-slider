@@ -53,10 +53,10 @@ const Slide = ({ slideData, nextSlide }) => {
         </TransitionWrapper>
 
         <div className="color-column-group">
-          <TransitionWrapper id={id} className="square-one">
+          <TransitionWrapper id={id} className="transition-square-one">
             <div className={colorSquareOneClass} />
           </TransitionWrapper>
-          <TransitionWrapper id={id} className="square-two">
+          <TransitionWrapper id={id} className="transition-square-two">
             <div className={colorSquareTwoClass} />
           </TransitionWrapper>
         </div>
