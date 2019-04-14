@@ -9,6 +9,7 @@ This project creates a dynamic slider for whatever you want to show in a cool wa
     "react-dom"
     "react-router-dom"
     "react-transition-group"
+    "enzyme"
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

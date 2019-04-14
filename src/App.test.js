@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('<App /> Component', () => {
+  const wrapper = shallow(<App />);
+  it('should render BrowserRouter', () => {
+    expect(wrapper.find('BrowserRouter').length).toBe(1);
+  });
+
+  it('should render two <Route> components to deal with query params', () => {
+    expect(wrapper.find('Route').length).toBe(2);
+  });
 });
