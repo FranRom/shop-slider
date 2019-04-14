@@ -1,4 +1,4 @@
-<iframe width="640" height="360" src="https://www.youtube.com/embed/eH9ntcwDsno?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Shop Slider](https://i.imgur.com/8fQ9zVE.png)](https://www.youtube.com/embed/eH9ntcwDsno?rel=0 'Click to watch')
 
 This project creates a dynamic slider for whatever you want to show in a cool way. It is plenty of animations an you can navigate through the next slide with an action (button in this case), or you can use query params to looking for a specific one.
 
