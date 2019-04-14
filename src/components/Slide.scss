@@ -55,6 +55,10 @@ h4 {
       z-index: 2;
     }
 
+    & .details {
+      display: flex;
+    }
+
     & .block {
       padding: $unit * 1.5;
       border: $border;
@@ -100,23 +104,19 @@ h4 {
         font-size: $size-L;
       }
     }
-
-    & .details {
-      display: flex;
-    }
   }
 
   & .orange-water {
     background-color: $orange-water;
-    transition: background-color 1s ease-out;
+    transition: background-color 800ms ease-out;
   }
   & .salmon-lap {
     background-color: $salmon-lap;
-    transition: background-color 1s ease-out;
+    transition: background-color 800ms ease-out;
   }
   & .green-cey {
     background-color: $green-cey;
-    transition: background-color 1s ease-out;
+    transition: background-color 800ms ease-out;
   }
   & .pink {
     background-color: $pink-water;

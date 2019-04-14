@@ -1,10 +1,22 @@
+<iframe width="640" height="360" src="https://www.youtube.com/embed/eH9ntcwDsno?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+This project creates a dynamic slider for whatever you want to show in a cool way. It is plenty of animations an you can navigate through the next slide with an action (button in this case), or you can use query params to looking for a specific one.
+
+### Dependencies:
+
+    "classnames"
+    "node-sass"
+    "react-dom"
+    "react-router-dom"
+    "react-transition-group"
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` or 'yarn start'
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -23,6 +35,21 @@ Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+    * [Dependencies:](#dependencies)
+
+- [Available Scripts](#available-scripts)
+  _ [`npm start` or 'yarn start'](#npm-start-or-yarn-start)
+  _ [`npm test`](#npm-test)
+  _ [`npm run build`](#npm-run-build)
+  _ [`npm run eject`](#npm-run-eject)
+
+<!-- /code_chunk_output -->
+
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.

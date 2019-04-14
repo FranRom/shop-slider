@@ -25,6 +25,8 @@
     cursor: pointer;
     &:hover {
       box-shadow: 1px;
+      color: $purple-water;
+      background-color: white;
     }
   }
 
